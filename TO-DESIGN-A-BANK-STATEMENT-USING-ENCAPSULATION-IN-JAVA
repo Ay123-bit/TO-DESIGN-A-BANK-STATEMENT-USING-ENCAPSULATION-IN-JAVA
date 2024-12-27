@@ -1,0 +1,46 @@
+//INPUT
+123
+2000
+0
+1
+import java.util.*;
+public class Calculator {
+    public static void main(String[] args) {
+        int a, b, d, ch;
+        
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the password:");
+        int password = s.nextInt();
+        if (password == 123) {
+            System.out.println("Welcome!,Your Current balance is: 1000");
+        } else {
+            System.out.println("Please try again");
+            return;
+        }
+        System.out.println("Enter any amout to be Deposited and to be Withdrawed: ");
+        a = s.nextInt();
+        b = s.nextInt();
+        System.out.println("Enter your choice to know the: \n1. Amount after Deposition \n2. Amount after Withdrwal");
+        ch = s.nextInt();
+        switch (ch) {
+            case 1:
+                d = a + b+1000;
+                System.out.println("Addition: " + d);
+                break;
+            case 2:
+                d = a - b+1000;
+                System.out.println("Subtraction: " + d);
+                break;
+            default:
+                System.out.println("Invalid choice!");
+        }
+        s.close();
+    }
+}
+Enter the password:
+Welcome!,Your Current balance is: 1000
+Enter any amout to be Deposited and to be Withdrawed: 
+Enter your choice to know the: 
+1. Amount after Deposition 
+2. Amount after Withdrwal
+Addition: 3000
